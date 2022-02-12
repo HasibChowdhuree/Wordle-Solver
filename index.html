@@ -17,7 +17,351 @@
 
 
 <body>
-    
+    <nav class="navbar sticky-top navbar-light " style="background-color: #7faac9;">
+        <div class="container-fluid d-flex justify-content-center align-items-center">
+            <a class="navbar-brand" href="/">
+              <h1>Wordle Solver</h1>
+            </a>
+        </div>
+    </nav>
+    <section class="d-flex justify-content-center align-items-center" style="margin-left: 10px;">
+        <div class="col-md-6">
+            <form class="row gy-2 gx-3 align-items-center" >
+                <div class="col-12" style="height: 40px;"></div>
+
+                <!-- First Word-->
+                <div class="col-auto d-flex justify-content-center">
+                    <h4 style="text-align: center;">Firstly, input <b style="color: blue;">"BRICK"</b> as the first word of your Wordle. Then select the color for every letters that you got from Wordle!</h4>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">B</div>
+                    </div>
+                    <select class="form-select" id="B" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">R</div>
+                    </div>
+                    <select class="form-select" id="R" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">I</div>
+                    </div>
+                    <select class="form-select" id="I" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">C</div>
+                    </div>
+                    <select class="form-select" id="C" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">K</div>
+                    </div>
+                    <select class="form-select" id="K" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+
+                <div class="col-12" style="height: 40px;"></div>
+                
+                <!-- Second Word-->
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 style="text-align: center;">After that, input <b style="color: blue;">"JUMPY"</b> as the second word of your Wordle and select the color for every letters.</h4>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">J</div>
+                    </div>
+                    <select class="form-select" id="J" required>
+                        <option selected disabled disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">U</div>
+                    </div>
+                    <select class="form-select" id="U" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">M</div>
+                    </div>
+                    <select class="form-select" id="M" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">P</div>
+                    </div>
+                    <select class="form-select" id="P" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">Y</div>
+                    </div>
+                    <select class="form-select" id="Y" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+
+
+                <div class="col-12" style="height: 40px;"></div>
+                
+                <!-- Third Word-->
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 style="text-align: center;">Then, input <b style="color: blue;">"VOZHD"</b> as the third word and select the colors.</h4>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">V</div>
+                    </div>
+                    <select class="form-select" id="V" required>
+                        <option selected disabled disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">O</div>
+                    </div>
+                    <select class="form-select" id="O" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">Z</div>
+                    </div>
+                    <select class="form-select" id="Z" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">H</div>
+                    </div>
+                    <select class="form-select" id="H" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">D</div>
+                    </div>
+                    <select class="form-select" id="D" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>                
+
+                <div class="col-12" style="height: 40px;"></div>
+                
+                <!-- Fourth Word-->
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 style="text-align: center;">Your fourth word is <b style="color: blue;">"GLENT"</b>. Input it in the wordle box and select the colors.</h4>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">G</div>
+                    </div>
+                    <select class="form-select" id="G" required>
+                        <option selected disabled disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">L</div>
+                    </div>
+                    <select class="form-select" id="L" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">E</div>
+                    </div>
+                    <select class="form-select" id="E" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">N</div>
+                    </div>
+                    <select class="form-select" id="N" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">T</div>
+                    </div>
+                    <select class="form-select" id="T" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>     
+
+
+                <div class="col-12" style="height: 40px;"></div>
+                
+                <!-- Fourth Word-->
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 style="text-align: center;">Finally, input <b style="color: blue;">"WAQFS"</b> as the fifth word and select the colors that you got from the wordle box.</h4>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">W</div>
+                    </div>
+                    <select class="form-select" id="W" required>
+                        <option selected disabled disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">A</div>
+                    </div>
+                    <select class="form-select" id="A" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">Q</div>
+                    </div>
+                    <select class="form-select" id="Q" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">F</div>
+                    </div>
+                    <select class="form-select" id="F" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text d-flex justify-content-center">S</div>
+                    </div>
+                    <select class="form-select" id="S" required>
+                        <option selected disabled value="">Select color</option>
+                        <option value="b" style="background-color: black; color: white;">Black</option>
+                        <option value="y" style="background-color: yellow; color: black;">Yellow</option>
+                        <option value="g" style="background-color: green; color: white;">Green</option>
+                    </select>
+                </div>     
+
+
+                <div class="col-12" style="height: 40px;"></div>
+
+                <div class="col-12 d-flex justify-content-center">
+                    <h4 style="text-align: center;">Click the button below to find out your word. Input that word as the sixth and final word.</h4>
+                </div>
+
+
+                <div class="col-12" style="height: 20px;"></div>
+
+                <!-- Button -->
+                <div class="col-12 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary btn-lg">Find out the word</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <br><br><br>
+    <div class="bg-dark d-flex justify-content-center align-items-center" style="height: 100px;">
+        <div style="color: wheat;"> Created with &#10084 by <a style="color: rgb(14, 194, 201); text-decoration: none;" href="https://www.HasibChowdhuree.website" target="_blank">&nbsp; Hasib Chowdhuree &nbsp;</a></div>
+    </div>
+
 </body>
 
 
