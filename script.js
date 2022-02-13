@@ -1,14 +1,16 @@
 function validate(){
-    if(document.getElementById("B").value=="" || document.getElementById("R").value=="" || document.getElementById("I").value=="" || document.getElementById("C").value=="" || document.getElementById("K").value=="" ){
+    var colors = document.getElementById("B").value + document.getElementById("R").value + document.getElementById("I").value + document.getElementById("C").value + document.getElementById("K").value + document.getElementById("J").value + document.getElementById("U").value + document.getElementById("M").value + document.getElementById("P").value + document.getElementById("Y").value + document.getElementById("V").value + document.getElementById("O").value + document.getElementById("Z").value + document.getElementById("H").value + document.getElementById("D").value + document.getElementById("G").value + document.getElementById("L").value + document.getElementById("E").value + document.getElementById("N").value + document.getElementById("T").value + document.getElementById("W").value + document.getElementById("A").value + document.getElementById("Q").value + document.getElementById("F").value + document.getElementById("S").value ;
+    
+    if(colors.includes("g") || colors.includes("y")){
+        result();
+    }
+    else{
         swal({
-            title: "Empty Cells!",
-            text: "You have not filled up all the boxes. Select the color of all the letters to get the Wordle Solution!",
+            title: "No green or yellow letters!",
+            text: "You have not selected any green or yellow letters. Select yellow or green as the color of some of the letters to get the Wordle Solution!",
             icon: "warning",
             button: "Okay",
         });
-    }
-    else{
-        result();
     }
 }
 
@@ -84,9 +86,6 @@ function result(){
             var words_json;
             var words;
             words_json = this.responseText;
-            // console.log(words);
-            // // jsonData(data);
-            // console.log(words_json);
             words=JSON.parse(words_json);
             console.log(words);
             for(var i in words){
@@ -114,19 +113,45 @@ function result(){
             var show;
             if(correct_result.length==1){
                 show=correct_result[0];
-            }
-            else{
-                show=correct_result;
-            }
-
-            swal({ title: show,
-                    text: `Your word is ${show}. After testing, this software had more than 99% accuracy. Hope that yours is correct as well.`,
+                swal({ title: show,
+                    text: `Your word is ${show}. \nThank you for using Wordle Solver. Have a nice day!`,
                     icon: "success",
                     button:"Solve another WORDLE"}).then(okay => {
                     if (okay) {
-                        window.location.href = "/";
+                        window.location.href = "https://www.hasibchowdhuree.website/Wordle-Solver/";
                     }
-            });
+                });
+            }
+            else if(correct_result.length==0 && Object.keys(yellow_dict).length + Object.keys(green_dict).length < 4){
+                swal({ title: "Insufficient Information!",
+                    text: "Kindly check again and make sure that you have selected the green and yellow letters correctly",
+                    icon: "warning",
+                    button: "Okay",
+                });
+            }
+            else if(correct_result.length==0){
+                swal({ title: "Word unavailable in dataaset",
+                    text: "Sorry! Your word is unavailable in our dataset. \nThis may occcur due to the fact that you are solving Wordle puzzle from other websites. \nWe used the same dataset that the real Wordle (nytimes.com/games/wordle) uses. \nKindly email the word to hasibchowdhuree@outlook.com so that we can add this word in our dataset.",
+                    icon: "warning",
+                    button: "Solve another WORDLE"}).then(okay => {
+                        if (okay) {
+                            window.location.href = "https://www.hasibchowdhuree.website/Wordle-Solver/";
+                        }
+                });
+            }
+            else{
+                show=correct_result;
+                swal({ title: show,
+                    text: `Your word is one of the following - ${show}. \nSorry we could not narrow it down to one word. But we can assure you that it is one of these. \n99% of the time, we narrow it down to one word, This word has to be one of those 1%.`,
+                    icon: "success",
+                    button:"Solve another WORDLE"}).then(okay => {
+                    if (okay) {
+                        window.location.href = "https://www.hasibchowdhuree.website/Wordle-Solver/";
+                    }
+                });
+            }
+
+            
         }
     };
     xmlhttp.open("GET", "words.json", true);
